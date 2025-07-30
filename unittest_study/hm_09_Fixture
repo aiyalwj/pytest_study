@@ -1,0 +1,41 @@
+Fixture 测试夹具 是一种代码结构
+在某些特定的情况下，会自动执行
+
+方法级别（掌握）
+    在每个测试方法（用例代码）执行前后都会自动调用的结构
+
+    #方法执行之前
+    def setUp(self):
+        # 每个测试方法执行之前都会执行
+        pass
+
+    #方法执行之后
+    def tearDown(self):
+        # 每个测试方法执行之后都会执行
+        pass
+
+
+类级别（掌握）
+    在每个测试类中所有方法执行前后都会自动调用的结构 （在整个类中，执行之前执行之后各一次）
+
+    #类中所有方法执行之前
+    @classmethod
+    def setupClass (cls):
+        pass
+
+    #类中所有方法执行之后
+    @classmethod
+    def teardownClass(cls):
+        pass
+
+模块级别（了解）
+    模块：代码文件
+    在每个代码文件执行前后执行的代码结构
+
+    #代码文件之前
+    def setupModule():
+        pass
+
+    #代码文件之后
+    def teardownModule():
+        pass

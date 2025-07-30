@@ -1,0 +1,22 @@
+>HTML报告插件
+pip install pytest-html
+
+使用
+1.在 pytest 配置文件中，增加命令选项
+选项:--html=./报告路径/报告文件名.html --self-contained-html
+说明:--self-contained-html 将 css 文件内嵌到报告文件中
+2.执行 pytest 指令，运行测试即可
+
+>控制方法执行顺序插件
+pip install pytest-ordering
+
+使用
+直接在测试类或测试方法上方添加 @pytest.mark.run(order=序号)
+
+>失败重试插件
+pip install pytest-rerunfailures
+
+使用
+1.在 pytest 配置文件中，增加命令选项
+选项:--reruns 次数
+2.执行 pytest 指令，运行测试即可
